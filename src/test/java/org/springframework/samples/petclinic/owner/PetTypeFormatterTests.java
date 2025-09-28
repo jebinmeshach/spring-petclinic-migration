@@ -1,11 +1,11 @@
 package org.springframework.samples.petclinic.owner;
 
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Test class for {@link PetTypeFormatter}
@@ -28,7 +28,7 @@ public class PetTypeFormatterTests {
 
     private PetTypeFormatter petTypeFormatter;
 
-    @Before
+    @BeforeEach
     public void setup() {
         this.petTypeFormatter = new PetTypeFormatter(pets);
     }

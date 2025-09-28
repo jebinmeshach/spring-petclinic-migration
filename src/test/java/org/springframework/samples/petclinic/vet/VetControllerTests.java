@@ -1,8 +1,8 @@
 package org.springframework.samples.petclinic.vet;
 
 import org.assertj.core.util.Lists;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -30,7 +30,7 @@ public class VetControllerTests {
     @MockBean
     private VetRepository vets;
 
-    @Before
+    @BeforeEach
     public void setup() {
         Vet james = new Vet();
         james.setFirstName("James");
